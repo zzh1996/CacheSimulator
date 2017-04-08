@@ -16,5 +16,10 @@ namespace CacheSimulator
         {
             InitializeComponent();
         }
+
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("PB14011086 郑子涵");
+        }
     }
 }
