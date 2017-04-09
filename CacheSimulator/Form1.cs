@@ -41,7 +41,7 @@ namespace CacheSimulator
                 listBox1.Items.Clear();
                 for (int i = 0; i < 1000; i++)
                 {
-                    if(i<din.Count)
+                    if (i < din.Count)
                         listBox1.Items.Add(din[i]);
                 }
                 listBox1.SelectedIndex = 0;
@@ -143,7 +143,7 @@ namespace CacheSimulator
             );
             if (cache.Updated)
             {
-                textBox2.Text += Environment.NewLine+String.Format("访问类型: {0}\t地址: {1}\t块号: {2}"+Environment.NewLine+
+                textBox2.Text += Environment.NewLine + String.Format("访问类型: {0}\t地址: {1}\t块号: {2}" + Environment.NewLine +
                     "块内地址: {3}\t索引: {4}\t命中情况: {5}",
                     cache.Type == 0 ? "读数据" : cache.Type == 1 ? "写数据" : "读指令",
                     cache.Address, cache.BlockNum, cache.InBlockAddress, cache.IndexNum, cache.Miss ? "不命中" : "命中");

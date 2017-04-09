@@ -236,8 +236,8 @@
             this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Items.AddRange(new object[] {
-            "不预取",
-            "不命中预取"});
+            "写回法",
+            "写直达法"});
             this.comboBox5.Location = new System.Drawing.Point(139, 124);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(121, 20);
@@ -305,9 +305,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(6, 127);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 5;
-            this.label5.Text = "预取策略";
+            this.label5.Text = "写策略";
             // 
             // label4
             // 

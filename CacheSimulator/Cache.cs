@@ -21,7 +21,7 @@ namespace CacheSimulator
             LastReplaceTime = -1;
         }
 
-        public bool Access(int BlockNum,int cycle)
+        public bool Access(int BlockNum, int cycle)
         {
             if (BlockNum == Tag)
             {
@@ -44,14 +44,14 @@ namespace CacheSimulator
 
         public Index()
         {
-            blocks=new Block[32];
+            blocks = new Block[32];
             for (int i = 0; i < 32; i++)
             {
-                blocks[i]=new Block();
+                blocks[i] = new Block();
             }
         }
 
-        public bool Search(int BlockNum,int cycle)
+        public bool Search(int BlockNum, int cycle)
         {
             for (int i = 0; i < Cache.Associativity; i++)
             {
@@ -73,7 +73,7 @@ namespace CacheSimulator
                     MinBlock = 0;
                     for (int i = 0; i < Cache.Associativity; i++)
                     {
-                        if (blocks[i].LastAccessTime<MinTime)
+                        if (blocks[i].LastAccessTime < MinTime)
                         {
                             MinTime = blocks[i].LastAccessTime;
                             MinBlock = i;
@@ -86,7 +86,7 @@ namespace CacheSimulator
                     MinBlock = 0;
                     for (int i = 0; i < Cache.Associativity; i++)
                     {
-                        if (blocks[i].LastReplaceTime<MinTime)
+                        if (blocks[i].LastReplaceTime < MinTime)
                         {
                             MinTime = blocks[i].LastReplaceTime;
                             MinBlock = i;
@@ -116,10 +116,10 @@ namespace CacheSimulator
         {
             ReadICount = ReadIMiss = ReadDCount = ReadDMiss = WriteCount = WriteMiss = 0;
             Updated = false;
-            indexes=new Index[65536];
+            indexes = new Index[65536];
             for (int i = 0; i < 65536; i++)
             {
-                indexes[i]=new Index();
+                indexes[i] = new Index();
             }
             cycle = 0;
             rnd = new Random();
